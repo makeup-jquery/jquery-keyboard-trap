@@ -1,0 +1,52 @@
+{
+  "name": "@ebay/jquery-keyboard-trap",
+  "description": "Traps keyboard focus cycle within element's interactive children.",
+  "version": "0.1.5",
+  "scripts": {
+    "start": "karma start --autoWatch true --singleRun false",
+    "test": "karma start",
+    "prepublish": "npm run build",
+    "lint": "jshint jquery.keyboardtrap.js > jshint.txt",
+    "minify": "jsmin -o jquery.keyboardtrap.min.js jquery.keyboardtrap.js",
+    "clean": "rimraf test_reports *.min.js jshint.txt",
+    "build": "npm run clean && npm run lint && npm test && npm run minify"
+  },
+  "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
+  "homepage": "https://github.com/ianmcburnie/jquery-keyboard-trap",
+  "bugs": {
+    "url": "https://github.com/ianmcburnie/jquery-keyboard-trap/issues"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "ebayui",
+    "accessibility",
+    "a11y"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ianmcburnie/jquery-keyboard-trap.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "jasmine-core": "^2.3.4",
+    "jquery": "1.11.2",
+    "jshint": "^2.8.0",
+    "jsmin": "^1.0.1",
+    "karma": "^0.13.9",
+    "karma-coverage": "^0.5.0",
+    "karma-html-reporter": "^0.2.6",
+    "karma-jasmine": "^0.3.6",
+    "karma-junit-reporter": "^0.3.3",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18",
+    "rimraf": "^2.4.4",
+    "@ebay/jquery-focusable": "~0.0.0",
+    "@ebay/jquery-focus-exit": "~0.0.0"
+  },
+  "peerDependencies": {
+    "@ebay/jquery-focusable": "~0.0.0",
+    "@ebay/jquery-focus-exit": "~0.0.0"
+  }
+}
