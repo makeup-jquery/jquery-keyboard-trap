@@ -23,7 +23,7 @@
             <p>Use keyboard to activate the 'trap' button. Keyboard focus will be trapped inside the bordered element. For best results, keyboard focus should be inside trapped element before trap is activated.</p>
             <a href="http://www.ebay.com">ebay</a>
             <div class="trap">
-                <button>trap</button><a href="http://www.ebay.com">ebay</a><a href="http://www.ebay.com">ebay</a>
+                <button>Trap</button><a href="http://www.ebay.com">ebay</a><a href="http://www.ebay.com">ebay</a>
             </div>
             <a href="http://www.ebay.com">ebay</a>
         </div>
@@ -45,11 +45,11 @@
                 }
             });
 
-            $('.trap').on('off.keyboardTrap', function() {
+            $('.trap').on('keyboardUntrap', function() {
                 $(this).find('button').first().text('Trap').attr('aria-pressed', 'false');
             });
 
-            $('.trap').on('on.keyboardTrap', function() {
+            $('.trap').on('keyboardTrap', function() {
                 $(this).find('button').first().text('Untrap').attr('aria-pressed', 'true');
             });
 

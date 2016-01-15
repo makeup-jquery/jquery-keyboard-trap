@@ -27,8 +27,13 @@ major and minor version.
 ## Install
 
 ```js
-npm install @ebay/jquery-keyboard-trap --save
+npm install @ebay/jquery-keyboard-trap
 ```
+
+## Events
+
+* `keyboardTrap` - keyboard has been trapped
+* `keyboardUntrap` - keyboard has been untrapped
 
 ## Options
 

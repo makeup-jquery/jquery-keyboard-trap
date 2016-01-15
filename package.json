@@ -44,11 +44,11 @@
     "phantomjs": "^1.9.18",
     "rimraf": "^2.4.4",
     "@ebay/jquery-focusable": "~0.0.0",
-    "@ebay/jquery-focus-exit": "~0.0.0"
+    "@ebay/jquery-focus-exit": "~0.1.0"
   },
   "peerDependencies": {
     "jquery": ">=1.11 < 3",
     "@ebay/jquery-focusable": "~0.0.0",
-    "@ebay/jquery-focus-exit": "~0.0.0"
+    "@ebay/jquery-focus-exit": "~0.1.0"
   }
 }

@@ -59,7 +59,7 @@ describe("jquery.keyboardtrap.js", function() {
         spyOn(eventHandlerMocks, 'onDeactivate');
 
         // execute
-        $trap.on('off.keyboardTrap', eventHandlerMocks.onDeactivate);
+        $trap.on('keyboardUntrap', eventHandlerMocks.onDeactivate);
         $trap.focus();
         $outerButton.focus();
 
@@ -78,7 +78,7 @@ describe("jquery.keyboardtrap.js", function() {
         spyOn(eventHandlerMocks, 'onDeactivate');
 
         // execute
-        $trap.on('off.keyboardTrap', eventHandlerMocks.onDeactivate);
+        $trap.on('keyboardUntrap', eventHandlerMocks.onDeactivate);
         $trap.focus();
         $outerButton.focus();
 
@@ -97,7 +97,7 @@ describe("jquery.keyboardtrap.js", function() {
         spyOn(eventHandlerMocks, 'onDeactivate');
 
         // execute
-        $trap.on('off.keyboardTrap', eventHandlerMocks.onDeactivate);
+        $trap.on('keyboardUntrap', eventHandlerMocks.onDeactivate);
         $innerButton.focus();
         $outerButton.focus();
 
@@ -116,7 +116,7 @@ describe("jquery.keyboardtrap.js", function() {
         spyOn(eventHandlerMocks, 'onDeactivate');
 
         // execute
-        $trap.on('off.keyboardTrap', eventHandlerMocks.onDeactivate);
+        $trap.on('keyboardUntrap', eventHandlerMocks.onDeactivate);
         $innerButton.focus();
         $outerButton.focus();
 

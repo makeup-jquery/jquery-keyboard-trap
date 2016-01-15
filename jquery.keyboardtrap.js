@@ -1,7 +1,7 @@
 /**
 * @name @ebay/jquery-keyboard-trap
 * @function $.trapKeyboard
-* @version 0.1.7
+* @version 0.2.0
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc Traps keyboard focus cycle within element's interactive children.
 * @requires jquery-focusable
@@ -9,6 +9,8 @@
 * @param {options}
 * @param {boolean} options.deactivateOnFocusExit - deactivate focus trap when
 * mouse user interacts with rest of page (default: false).
+* @fires {object} keyboardTrap - keyboard has been trapped
+* @fires {object} keyboardUntrap - keyboard has been untrapped
 */
 (function ($, window, document, undefined) {
 
@@ -55,7 +57,7 @@
         if (opts.deactivateOnFocusExit === true) {
             $trap.focusExit();
 
-            $trap.one('focusexit', function(e) {
+            $trap.one('focusExit', function(e) {
                 if (opts.deactivateOnFocusExit === true) {
                     $.untrapKeyboard();
                 }
@@ -70,7 +72,7 @@
         $('body').append($botTrap);
 
         $trap.addClass('keyboard-trap--active');
-        $trap.trigger('on.keyboardTrap');
+        $trap.trigger('keyboardTrap');
 
         return $trap;
     };
@@ -84,9 +86,9 @@
             $outerTrapAfter.detach();
             $botTrap.detach();
 
-            $trap.off('focusexit');
+            $trap.off('focusExit');
             $trap.removeClass('keyboard-trap--active');
-            $trap.trigger('off.keyboardTrap');
+            $trap.trigger('keyboardUntrap');
         }
         return $trap;
     };
