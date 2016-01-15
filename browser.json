@@ -1,0 +1,7 @@
+{
+    "dependencies":[
+        {"require-run": "jquery"},
+        {"require-run": "@ebay/jquery-focus-exit"},
+        {"require-run": "@ebay/jquery-focusable"}
+    ]
+}
