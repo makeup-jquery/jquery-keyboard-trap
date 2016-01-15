@@ -1,7 +1,7 @@
 /**
 * @name @ebay/jquery-keyboard-trap
 * @function $.trapKeyboard
-* @version 0.1.6
+* @version 0.1.7
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc Traps keyboard focus cycle within element's interactive children.
 * @requires jquery-focusable
