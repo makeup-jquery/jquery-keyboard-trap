@@ -32,7 +32,6 @@
     * @version 0.2.1
     * @fires keyboardTrap - when trap is activated
     * @fires keyboardUntrap - when trap is deactivated
-    * @param {Object} rovingItems - descendant items that will receive roving tabindex
     * @param {options}
     * @param {boolean} options.deactivateOnFocusExit - deactivate focus trap when mouse user interacts with rest of page (default: false)
     * @return {jQuery} chainable jQuery class
