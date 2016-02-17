@@ -1,32 +1,77 @@
 /**
-* @name @ebay/jquery-keyboard-trap
-* @function $.trapKeyboard
-* @version 0.2.0
-* @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @desc Traps keyboard focus cycle within element's interactive children.
-* @requires jquery-focusable
-* @requires jquery-focus-exit
-* @param {options}
-* @param {boolean} options.deactivateOnFocusExit - deactivate focus trap when
-* mouse user interacts with rest of page (default: false).
-* @fires {object} keyboardTrap - keyboard has been trapped
-* @fires {object} keyboardUntrap - keyboard has been untrapped
-*/
-(function ($, window, document, undefined) {
+ * @file jQuery singleton traps keyboard focus cycle within given element's interactive children
+ * @author Ian McBurnie <ianmcburnie@hotmail.com>
+ */
 
-    var trapTemplate = '<div tabindex="0" class="keyboard-trap-boundary">',
-        defaults = {
-            deactivateOnFocusExit: false
-        },
-        $topTrap = $(trapTemplate),
-        $outerTrapBefore = $(trapTemplate),
-        $innerTrapBefore = $(trapTemplate),
-        $innerTrapAfter = $(trapTemplate),
-        $outerTrapAfter = $(trapTemplate),
-        $botTrap = $(trapTemplate),
-        $trap,
-        $firstTabElement,
-        $lastTabElement;
+(function($, window, document, undefined) {
+
+    var pluginName = 'jquery-keyboard-trap';
+
+    /**
+    * jQuery definition to anchor JsDoc comments.
+    *
+    * @see http://jquery.com/
+    * @name $
+    * @class jQuery Library
+    */
+
+    /**
+    * jQuery 'fn' definition to anchor JsDoc comments.
+    *
+    *
+    * @see http://jquery.com/
+    * @name fn
+    * @class jQuery Plugin Scope
+    * @memberof jQuery
+    */
+
+    /**
+    * jQuery singleton traps keyboard focus cycle within given element's interactive children
+    *
+    * @class trapKeyboard
+    * @version 0.2.1
+    * @fires keyboardTrap - when trap is activated
+    * @fires keyboardUntrap - when trap is deactivated
+    * @param {Object} rovingItems - descendant items that will receive roving tabindex
+    * @param {options}
+    * @param {boolean} options.deactivateOnFocusExit - deactivate focus trap when mouse user interacts with rest of page (default: false)
+    * @return {jQuery} chainable jQuery class
+    * @requires @ebay/jquery-focusable
+    * @requires @ebay/jquery-focus-exit
+    * @memberof jQuery.fn
+    */
+
+    /**
+    * keyboardTrap event
+    *
+    * @event keyboardTrap
+    * @type {object}
+    * @property {object} event - event object
+    * @memberof jQuery.fn.trapKeyboard
+    */
+
+    /**
+    * keyboardUntrap event
+    *
+    * @event keyboardUntrap
+    * @type {object}
+    * @property {object} event - event object
+    * @memberof jQuery.fn.trapKeyboard
+    */
+
+    var trapTemplate = '<div tabindex="0" class="keyboard-trap-boundary">';
+    var $topTrap = $(trapTemplate);
+    var $outerTrapBefore = $(trapTemplate);
+    var $innerTrapBefore = $(trapTemplate);
+    var $innerTrapAfter = $(trapTemplate);
+    var $outerTrapAfter = $(trapTemplate);
+    var $botTrap = $(trapTemplate);
+    var $trap;
+    var $firstTabElement;
+    var $lastTabElement;
+    var defaults = {
+        deactivateOnFocusExit: false
+    };
 
     $topTrap.on('focus', setFocusToFirstFocusableElement);
     $outerTrapBefore.on('focus', setFocusToFirstFocusableElement);
@@ -35,17 +80,17 @@
     $outerTrapAfter.on('focus', setFocusToLastFocusableElement);
     $botTrap.on('focus', setFocusToLastFocusableElement);
 
-    function setFocusToFirstFocusableElement(){
+    function setFocusToFirstFocusableElement() {
         $firstTabElement.focus();
     }
 
-    function setFocusToLastFocusableElement(){
+    function setFocusToLastFocusableElement() {
         $lastTabElement.focus();
     }
 
     $.trapKeyboard = function trapKeyboard(el, options) {
-        var opts = $.extend({}, defaults, options),
-            $focusable;
+        var opts = $.extend({}, defaults, options);
+        var $focusable;
 
         $.untrapKeyboard();
 

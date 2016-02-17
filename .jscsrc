@@ -1,0 +1,6 @@
+{
+	"preset": "google",
+	"validateIndentation": 4,
+	"maximumLineLength": false,
+	"jsDoc": false
+}

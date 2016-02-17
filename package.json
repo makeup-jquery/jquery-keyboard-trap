@@ -5,13 +5,23 @@
   "main": "./jquery.keyboardtrap.js",
   "scripts": {
     "start": "karma start --autoWatch true --singleRun false",
-    "test": "karma start",
-    "prepublish": "npm run build",
-    "lint": "jshint jquery.keyboardtrap.js > jshint.txt",
+    "test": "karma start --autoWatch false --singleRun true",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
+    "lintsyntax": "jshint jquery.keyboardtrap.js > jshint.txt",
+    "lintstyle": "jscs jquery.keyboardtrap.js -c .jscsrc > jscs.txt",
+    "lint": "npm run lintsyntax && npm run lintstyle",
+    "fixstyle": "jscs jquery.keyboardtrap.js --fix",
+    "jsdoc": "jsdoc jquery.keyboardtrap.js -d jsdoc",
     "minify": "jsmin -o jquery.keyboardtrap.min.js jquery.keyboardtrap.js",
-    "clean": "rimraf test_reports *.min.js jshint.txt",
-    "build": "npm run clean && npm run lint && npm test && npm run minify"
+    "build": "npm run minify && npm run jsdoc",
+    "clean": "rimraf jsdoc test_reports *.min.js jshint.txt jscs.txt"
   },
+  "pre-commit": [
+    "clean",
+    "lint",
+    "test",
+    "build"
+  ],
   "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
   "homepage": "https://github.com/ianmcburnie/jquery-keyboard-trap",
   "bugs": {
@@ -30,9 +40,13 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@ebay/jquery-focus-exit": "~0.1.0",
+    "@ebay/jquery-focusable": "~0.0.0",
     "coveralls": "^2.11.4",
     "jasmine-core": "^2.3.4",
     "jquery": ">=1.11 < 3",
+    "jscs": "^2.10.1",
+    "jsdoc": "^3.4.0",
     "jshint": "^2.8.0",
     "jsmin": "^1.0.1",
     "karma": "^0.13.9",
@@ -42,9 +56,8 @@
     "karma-junit-reporter": "^0.3.3",
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.18",
-    "rimraf": "^2.4.4",
-    "@ebay/jquery-focusable": "~0.0.0",
-    "@ebay/jquery-focus-exit": "~0.1.0"
+    "pre-commit": "^1.1.2",
+    "rimraf": "^2.4.4"
   },
   "peerDependencies": {
     "jquery": ">=1.11 < 3",

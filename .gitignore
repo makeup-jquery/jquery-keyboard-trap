@@ -19,5 +19,8 @@ test_reports
 # Lint output
 jshint.txt
 
-# Minified JS
-*.min.js
+# Code style output
+jscs.txt
+
+# JSDoc
+jsdoc
