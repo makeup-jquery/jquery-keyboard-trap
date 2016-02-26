@@ -5,14 +5,14 @@
     <a href='https://coveralls.io/github/ianmcburnie/jquery-keyboard-trap?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-keyboard-trap/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
 </p>
 
-Prevents keyboard focus from leaving the confines of an element.
+Establishes a keyboard tab-loop using the interactive descendants of given container element. Or, in other words, it traps keyboard focus inside the given container element.
 
 ```js
-$.trapKeyboard(el, [options]);
+$.trapKeyboard(containerEl, options);
 $.untrapKeyboard();
 ```
 
-For best results, app developer should ensure a descendant of the element
+For best results, app developer should ensure a descendant of the container element
 already has keyboard focus before activating this plugin.
 
 ## Experimental
@@ -21,14 +21,41 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must
 consider all minor releases as breaking changes. Patch releases may introduce
 new features, but will be backwards compatible.
 
-Please use the tilde range specifier in your package.json to pin to a fixed
-major and minor version.
-
 ## Install
 
 ```js
 npm install @ebay/jquery-keyboard-trap
 ```
+
+## Example
+
+HTML structure for a typical dialog, in visible state, with close, cancel & okay focusable elements:
+
+```html
+<div role="dialog" class="dialog" aria-labelledby="dialog-0-title" aria-hidden="false">
+    <div role="document">
+        <header>
+            <h2 id="dialog-0-title">Notifications</h2>
+            <button aria-label="Close Dialog" id="dialog_close" type="button"></button>
+        </header>
+        <div>
+            <!-- dialog body content would go here -->            
+        </div>
+        <footer>
+            <button type="button">Cancel</button><button type="button">Ok</button>
+        </footer>
+    </div>
+</div>
+```
+
+Focus on an element then execute plugin:
+
+```js
+$('#dialog_close').focus();
+$.trapKeyboard('[role=dialog]');
+```
+
+The plugin has now created a tab loop using all focusable elements inside the dialog; keyboard focus is now trapped inside the dialog.
 
 ## Events
 
