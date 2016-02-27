@@ -19,6 +19,8 @@ module.exports = function(config) {
       'node_modules/@ebay/jquery-focusable/jquery.focusable.js',
       'node_modules/@ebay/jquery-focus-exit/jquery.focusexit.js',
       'jquery.keyboardtrap.js',
+      'test-data.js',
+      'test-setup.js',
       'test.js'
     ],
 
