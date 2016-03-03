@@ -1,7 +1,7 @@
 {
   "name": "@ebay/jquery-keyboard-trap",
   "description": "Traps keyboard focus cycle within element's interactive children.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "start": "karma start --autoWatch true --singleRun false",
     "test": "karma start --autoWatch false --singleRun true",
