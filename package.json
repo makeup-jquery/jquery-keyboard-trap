@@ -2,7 +2,6 @@
   "name": "@ebay/jquery-keyboard-trap",
   "description": "Traps keyboard focus cycle within element's interactive children.",
   "version": "0.2.1",
-  "main": "./jquery.keyboardtrap.js",
   "scripts": {
     "start": "karma start --autoWatch true --singleRun false",
     "test": "karma start --autoWatch false --singleRun true",
@@ -41,7 +40,7 @@
   "license": "ISC",
   "devDependencies": {
     "@ebay/jquery-focus-exit": "~0.1.0",
-    "@ebay/jquery-focusable": "~0.0.0",
+    "@ebay/jquery-focusable": "~0.2.0",
     "coveralls": "^2.11.4",
     "jasmine-core": "^2.3.4",
     "jquery": ">=1.11 < 3",
@@ -61,7 +60,7 @@
   },
   "peerDependencies": {
     "jquery": ">=1.11 < 3",
-    "@ebay/jquery-focusable": "~0.0.0",
+    "@ebay/jquery-focusable": "~0.2.0",
     "@ebay/jquery-focus-exit": "~0.1.0"
   }
 }

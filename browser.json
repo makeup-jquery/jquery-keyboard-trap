@@ -1,7 +1,8 @@
 {
     "dependencies":[
         {"require-run": "jquery"},
-        {"require-run": "@ebay/jquery-focus-exit"},
-        {"require-run": "@ebay/jquery-focusable"}
+        "jquery.keyboardtrap.js",
+        "@ebay/jquery-focus-exit",
+        "@ebay/jquery-focusable"
     ]
 }
