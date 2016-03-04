@@ -1,7 +1,7 @@
 /**
 * @file jQuery singleton traps keyboard focus cycle within given element's interactive children
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 0.2.2
+* @version 0.2.3
 * @requires jquery
 * @requires @ebay/jquery-focusable
 * @requires @ebay/jquery-focus-exit
@@ -20,9 +20,6 @@
     var $trap;
     var $firstTabElement;
     var $lastTabElement;
-    var defaults = {
-        deactivateOnFocusExit: false
-    };
 
     $topTrap.on('focus', setFocusToFirstFocusableElement);
     $outerTrapBefore.on('focus', setFocusToFirstFocusableElement);
@@ -41,14 +38,18 @@
 
     /**
     * @method "jQuery.trapKeyboard"
-    * @param {options}
-    * @param {boolean} options.deactivateOnFocusExit - deactivate focus trap when mouse user interacts with rest of page (default: false)
+    * @param {Object} [options]
+    * @param {boolean} [options.deactivateOnFocusExit] - deactivate focus trap when mouse user interacts with rest of page (default: false)
     * @fires keyboardTrap - when trap is activated
     * @fires keyboardUntrap - when trap is deactivated
     * @return {Object} chainable jQuery class
     */
     $.trapKeyboard = function trapKeyboard(el, options) {
-        var opts = $.extend({}, defaults, options);
+
+        options = $.extend({
+            deactivateOnFocusExit: false
+        }, options);
+
         var $focusable;
 
         $.untrapKeyboard();
@@ -58,17 +59,14 @@
         $firstTabElement = $focusable.first();
         $lastTabElement = $focusable.last();
 
-        if (opts.deactivateOnFocusExit === true) {
-            $trap.focusExit();
-
-            $trap.one('focusExit', function(e) {
-                if (opts.deactivateOnFocusExit === true) {
-                    $.untrapKeyboard();
-                }
+        if (options.deactivateOnFocusExit === true) {
+            $trap.focusExit().one('focusExit', function(e) {
+                $.untrapKeyboard();
             });
         }
 
         $('body').prepend($topTrap);
+
         $outerTrapBefore.insertBefore($trap);
         $trap.prepend($innerTrapBefore);
         $trap.append($innerTrapAfter);
