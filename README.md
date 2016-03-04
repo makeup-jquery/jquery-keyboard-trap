@@ -3,6 +3,8 @@
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-keyboard-trap"><img src="https://api.travis-ci.org/ianmcburnie/jquery-keyboard-trap.svg?branch=master" alt="Build Status" /></a>
     <a href='https://coveralls.io/github/ianmcburnie/jquery-keyboard-trap?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-keyboard-trap/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-keyboard-trap"><img src="https://david-dm.org/ianmcburnie/jquery-keyboard-trap.svg" alt="Dependency status" /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-keyboard-trap#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-keyboard-trap/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
 Establishes a keyboard tab-loop using the interactive descendants of given container element. Or, in other words, it traps keyboard focus inside the given container element.
