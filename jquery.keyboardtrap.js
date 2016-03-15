@@ -3,8 +3,8 @@
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @version 0.2.3
 * @requires jquery
-* @requires @ebay/jquery-focusable
-* @requires @ebay/jquery-focus-exit
+* @requires jquery-focusable
+* @requires jquery-focus-exit
 */
 (function($, window, document, undefined) {
 

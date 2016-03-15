@@ -16,8 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/@ebay/jquery-focusable/jquery.focusable.js',
-      'node_modules/@ebay/jquery-focus-exit/jquery.focusexit.js',
+      'node_modules/jquery-focusable/jquery.focusable.js',
+      'node_modules/jquery-focus-exit/jquery.focusexit.js',
       'jquery.keyboardtrap.js',
       'test-data.js',
       'test-setup.js',

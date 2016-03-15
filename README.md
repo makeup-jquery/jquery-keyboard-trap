@@ -1,4 +1,4 @@
-# @ebay/jquery-keyboard-trap
+# jquery-keyboard-trap
 
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-keyboard-trap"><img src="https://api.travis-ci.org/ianmcburnie/jquery-keyboard-trap.svg?branch=master" alt="Build Status" /></a>
@@ -26,7 +26,7 @@ new features, but will be backwards compatible.
 ## Install
 
 ```js
-npm install @ebay/jquery-keyboard-trap
+npm install jquery-keyboard-trap
 ```
 
 ## Example
@@ -72,8 +72,8 @@ keyboard trap with pointer. Default: `false`.
 ## Dependencies
 
 * [jquery](https://jquery.com/)
-* [@ebay/jquery-focusable](https://github.com/ianmcburnie/jquery-focusable)
-* [@ebay/jquery-focus-exit](https://github.com/ianmcburnie/jquery-focus-exit)
+* [jquery-focusable](https://github.com/ianmcburnie/jquery-focusable)
+* [jquery-focus-exit](https://github.com/ianmcburnie/jquery-focus-exit)
 
 ## Notes
 
