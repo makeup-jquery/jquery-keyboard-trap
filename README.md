@@ -25,9 +25,17 @@ new features, but will be backwards compatible.
 
 ## Install
 
+<strike>
+```
+npm install @ebay/jquery-keyboard-trap
+```
+</strike>
+
 ```js
 npm install jquery-keyboard-trap
 ```
+
+**NOTE: The @ebay package scope is no longer supported. In order to receive latest NPM updates, please use the non-scoped version of this package.**
 
 ## Example
 
