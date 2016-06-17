@@ -1,0 +1,17 @@
+{
+    "extends": "google",
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "rules": {
+        "indent": [2, 4, { "SwitchCase": 1 }],
+        "max-len": 0,
+        "no-unused-vars": 0,
+        "no-shadow-restricted-names": 0,
+        "new-cap": 0,
+        "require-jsdoc": 0,
+        "valid-jsdoc": 0,
+        "wrap-iife": [2, "any"]
+    }
+}

@@ -1,13 +1,12 @@
 /**
 * @file jQuery singleton traps keyboard focus cycle within given element's interactive children
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 0.2.3
+* @version 0.3.0
 * @requires jquery
 * @requires jquery-focusable
 * @requires jquery-focus-exit
 */
 (function($, window, document, undefined) {
-
     var pluginName = 'jquery-keyboard-trap';
 
     var trapTemplate = '<div tabindex="0" class="keyboard-trap-boundary">';
@@ -45,7 +44,6 @@
     * @return {Object} chainable jQuery class
     */
     $.trapKeyboard = function trapKeyboard(el, options) {
-
         options = $.extend({
             deactivateOnFocusExit: false
         }, options);
@@ -94,7 +92,6 @@
         }
         return $trap;
     };
-
 }(jQuery, window, document));
 
 /**

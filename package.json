@@ -6,14 +6,12 @@
     "start": "karma start --autoWatch true --singleRun false",
     "test": "karma start --autoWatch false --singleRun true",
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
-    "lintsyntax": "jshint jquery.keyboardtrap.js > jshint.txt",
-    "lintstyle": "jscs jquery.keyboardtrap.js -c .jscsrc > jscs.txt",
-    "lint": "npm run lintsyntax && npm run lintstyle",
-    "fixstyle": "jscs jquery.keyboardtrap.js --fix",
+    "build": "npm run jsdoc && npm run minify",
+    "clean": "rimraf jsdoc test_reports *.min.js lint.txt",
+    "fix": "eslint jquery.keyboardtrap.js --fix",
     "jsdoc": "jsdoc jquery.keyboardtrap.js -d jsdoc",
-    "minify": "jsmin -o jquery.keyboardtrap.min.js jquery.keyboardtrap.js",
-    "build": "npm run minify && npm run jsdoc",
-    "clean": "rimraf jsdoc test_reports *.min.js jshint.txt jscs.txt"
+    "lint": "eslint jquery.keyboardtrap.js > lint.txt",
+    "minify": "jsmin -o jquery.keyboardtrap.min.js jquery.keyboardtrap.js"
   },
   "pre-commit": [
     "clean",
@@ -39,28 +37,33 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "jquery-focus-exit": "~0.1.0",
-    "jquery-focusable": "~0.2.0",
-    "coveralls": "^2.11.4",
-    "jasmine-core": "^2.3.4",
-    "jquery": ">=1.11 < 3",
-    "jscs": "^2.10.1",
+    "coveralls": "^2.11.9",
+    "eslint": "^2.12.0",
+    "eslint-config-google": "^0.4.0",
+    "jasmine-core": "^2.4.1",
+    "jquery": ">=1.11",
+    "jquery-focus-exit": "~0.2.0",
+    "jquery-focusable": "~0.3.0",
+    "jquery-migrate": "^1.4.1",
+    "jquery-next-id": "~0.1.0",
     "jsdoc": "^3.4.0",
-    "jshint": "^2.8.0",
     "jsmin": "^1.0.1",
-    "karma": "^0.13.9",
-    "karma-coverage": "^0.5.0",
-    "karma-html-reporter": "^0.2.6",
-    "karma-jasmine": "^0.3.6",
-    "karma-junit-reporter": "^0.3.3",
+    "karma": "^0.13.22",
+    "karma-coverage": "^1.0.0",
+    "karma-html-reporter": "^0.2.7",
+    "karma-jasmine": "^1.0.2",
+    "karma-junit-reporter": "^1.0.0",
     "karma-phantomjs-launcher": "^1.0.0",
-    "phantomjs": "^1.9.18",
-    "pre-commit": "^1.1.2",
-    "rimraf": "^2.4.4"
+    "phantomjs-prebuilt": "^2.1.7",
+    "pre-commit": "^1.1.3",
+    "rimraf": "^2.5.2"
   },
   "peerDependencies": {
-    "jquery": ">=1.11 < 3",
-    "jquery-focusable": "~0.2.0",
-    "jquery-focus-exit": "~0.1.0"
+    "jquery": ">=1.11",
+    "jquery-focusable": "~0.3.0",
+    "jquery-focus-exit": "~0.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

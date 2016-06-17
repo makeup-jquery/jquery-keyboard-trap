@@ -17,10 +17,7 @@ node_modules
 test_reports
 
 # Lint output
-jshint.txt
+lint.txt
 
-# Code style output
-jscs.txt
-
-# JSDoc
+# JSDoc output
 jsdoc
