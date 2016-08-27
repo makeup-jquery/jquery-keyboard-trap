@@ -17,7 +17,6 @@ module.exports = function(config) {
     files: [
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/jquery-focusable/jquery.focusable.js',
-      'node_modules/jquery-focus-exit/jquery.focusexit.js',
       'jquery.keyboardtrap.js',
       'test-data.js',
       'test-setup.js',

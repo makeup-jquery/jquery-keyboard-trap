@@ -1,8 +1,7 @@
 {
     "dependencies":[
         {"require-run": "jquery"},
-        "jquery.keyboardtrap.js",
-        "jquery-focus-exit",
-        "jquery-focusable"
+        "jquery-focusable",
+        "jquery.keyboardtrap.js"
     ]
 }

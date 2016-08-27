@@ -43,7 +43,6 @@
     "jasmine-core": "^2.4.1",
     "jquery": ">=1.11",
     "jquery-focusable": "~0.3.0",
-    "jquery-focus-exit": "~0.3.0",
     "jquery-migrate": "^1.4.1",
     "jsdoc": "^3.4.0",
     "jsmin": "^1.0.1",
@@ -59,8 +58,7 @@
   },
   "peerDependencies": {
     "jquery": ">=1.11",
-    "jquery-focusable": "~0.3.0",
-    "jquery-focus-exit": "~0.3.0"
+    "jquery-focusable": "~0.3.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

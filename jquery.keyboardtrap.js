@@ -1,10 +1,9 @@
 /**
 * @file jQuery singleton traps keyboard focus cycle within given element's interactive children
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 0.3.1
+* @version 0.4.0
 * @requires jquery
 * @requires jquery-focusable
-* @requires jquery-focus-exit
 */
 (function($, window, document, undefined) {
     var pluginName = 'jquery-keyboard-trap';
@@ -38,16 +37,11 @@
     /**
     * @method "jQuery.trapKeyboard"
     * @param {Object} [options]
-    * @param {boolean} [options.deactivateOnFocusExit] - deactivate focus trap when mouse user interacts with rest of page (default: false)
     * @fires keyboardTrap - when trap is activated
     * @fires keyboardUntrap - when trap is deactivated
     * @return {Object} chainable jQuery class
     */
-    $.trapKeyboard = function trapKeyboard(el, options) {
-        options = $.extend({
-            deactivateOnFocusExit: false
-        }, options);
-
+    $.trapKeyboard = function trapKeyboard(el) {
         var $focusable;
 
         $.untrapKeyboard();
@@ -56,12 +50,6 @@
         $focusable = $trap.focusable();
         $firstTabElement = $focusable.first();
         $lastTabElement = $focusable.last();
-
-        if (options.deactivateOnFocusExit === true) {
-            $trap.focusExit().one('focusExit', function(e) {
-                $.untrapKeyboard();
-            });
-        }
 
         $('body').prepend($topTrap);
 

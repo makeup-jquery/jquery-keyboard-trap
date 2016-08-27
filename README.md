@@ -74,14 +74,12 @@ The plugin has now created a tab loop using all focusable elements inside the di
 
 ## Options
 
-* `deactivateOnFocusExit`: deactivate the keyboard trap when clicking outside of
-keyboard trap with pointer. Default: `false`.
+None.
 
 ## Dependencies
 
 * [jquery](https://jquery.com/)
 * [jquery-focusable](https://github.com/ianmcburnie/jquery-focusable)
-* [jquery-focus-exit](https://github.com/ianmcburnie/jquery-focus-exit)
 
 ## Notes
 
@@ -96,10 +94,8 @@ Execute `npm run` to view all available CLI scripts:
 
 * `npm start` test driven development: watches code and re-tests after any change
 * `npm test` runs tests & generates reports (see reports section below)
-* `npm run lintsyntax` lints code for syntax and style (reports errors to jshint.txt)
-* `npm run lintstyle` lints code for syntax (reports errors to jscs.txt)
-* `npm run lint` lints code for syntax and style
-* `npm run fixstyle` attempts to auto fix style errors
+* `npm run lint` lints code for syntax and style using eslint
+* `npm run fixstyle` attempts to auto fix style errors using eslint
 * `npm run minify` builds minified version of code
 * `npm run jsdoc` generates jsdocs
 * `npm run build` minifies code and generates jsdocs
