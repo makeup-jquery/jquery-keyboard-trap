@@ -21,3 +21,9 @@ lint.txt
 
 # JSDoc output
 jsdoc
+
+# Lasso cache & build
+
+.cache
+build
+docs/browser.js.*
