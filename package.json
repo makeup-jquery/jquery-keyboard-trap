@@ -3,7 +3,7 @@
   "description": "Traps keyboard focus cycle within element's interactive children.",
   "version": "0.4.0",
   "scripts": {
-    "start": "gulp",
+    "start": "npm run lasso && parallelshell 'npm run server' 'npm run watch'",
     "tdd": "karma start --autoWatch true --singleRun false",
     "test": "karma start --autoWatch false --singleRun true",
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
@@ -13,7 +13,9 @@
     "jsdoc": "jsdoc jquery.keyboardtrap.js -d jsdoc",
     "lasso": "lasso browser.json --output-dir docs --minify",
     "lint": "eslint jquery.keyboardtrap.js > lint.txt",
-    "minify": "jsmin -o jquery.keyboardtrap.min.js jquery.keyboardtrap.js"
+    "minify": "jsmin -o jquery.keyboardtrap.min.js jquery.keyboardtrap.js",
+    "server": "browser-sync start -s --ss docs --index docs/index.html --files docs ",
+    "watch": "onchange jquery.keyboardtrap.js -- npm run lasso"
   },
   "pre-commit": [
     "clean",
@@ -40,11 +42,9 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2",
-    "child_process": "^1",
     "coveralls": "^2",
     "eslint": "^3",
     "eslint-config-google": "~0.6",
-    "gulp": "^3.9.1",
     "jasmine-core": "^2",
     "jquery": ">=1.11",
     "jquery-focusable": "~0.3",
@@ -58,6 +58,8 @@
     "karma-junit-reporter": "^1",
     "karma-phantomjs-launcher": "^1",
     "lasso-cli": "^2",
+    "onchange": "^3",
+    "parallelshell": "^2",
     "phantomjs-prebuilt": "^2",
     "pre-commit": "^1",
     "rimraf": "^2"
