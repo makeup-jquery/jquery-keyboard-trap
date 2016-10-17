@@ -39,7 +39,7 @@
     "type": "git",
     "url": "https://github.com/ianmcburnie/jquery-keyboard-trap.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2",
     "coveralls": "^2",
