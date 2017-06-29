@@ -7,6 +7,8 @@
     <a href="https://david-dm.org/ianmcburnie/jquery-keyboard-trap#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-keyboard-trap/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
+**ATTENTION:** A non-jQuery version is now available at [makeup-keyboard-trap](https://github.com/makeup-js/makeup-keyboard-trap).
+
 Establishes a keyboard tab-loop using the interactive descendants of given container element. Or, in other words, it traps keyboard focus inside the given container element.
 
 ```js
@@ -25,17 +27,9 @@ new features, but will be backwards compatible.
 
 ## Install
 
-<strike>
-```
-npm install @ebay/jquery-keyboard-trap
-```
-</strike>
-
 ```js
 npm install jquery-keyboard-trap
 ```
-
-**NOTE: The @ebay package scope is no longer supported. In order to receive latest NPM updates, please use the non-scoped version of this package.**
 
 ## Example
 
