@@ -19,12 +19,6 @@ $.untrapKeyboard();
 For best results, app developer should ensure a descendant of the container element
 already has keyboard focus before activating this plugin.
 
-## Experimental
-
-This plugin is still in an experimental state, until it reaches v1.0.0 you must
-consider all minor releases as breaking changes. Patch releases may introduce
-new features, but will be backwards compatible.
-
 ## Install
 
 ```js
