@@ -1,7 +1,7 @@
 /**
 * @file jQuery singleton traps keyboard focus cycle within given element's interactive children
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 0.4.0
+* @version 1.0.0
 * @requires jquery
 * @requires jquery-focusable
 */
