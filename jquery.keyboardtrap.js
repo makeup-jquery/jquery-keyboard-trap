@@ -19,13 +19,6 @@
     var $firstTabElement;
     var $lastTabElement;
 
-    $topTrap.on('focus', setFocusToFirstFocusableElement);
-    $outerTrapBefore.on('focus', setFocusToFirstFocusableElement);
-    $innerTrapBefore.on('focus', setFocusToLastFocusableElement);
-    $innerTrapAfter.on('focus', setFocusToFirstFocusableElement);
-    $outerTrapAfter.on('focus', setFocusToLastFocusableElement);
-    $botTrap.on('focus', setFocusToLastFocusableElement);
-
     function setFocusToFirstFocusableElement() {
         $firstTabElement.focus();
     }
@@ -33,6 +26,13 @@
     function setFocusToLastFocusableElement() {
         $lastTabElement.focus();
     }
+
+    $topTrap.on('focus', setFocusToFirstFocusableElement);
+    $outerTrapBefore.on('focus', setFocusToFirstFocusableElement);
+    $innerTrapBefore.on('focus', setFocusToLastFocusableElement);
+    $innerTrapAfter.on('focus', setFocusToFirstFocusableElement);
+    $outerTrapAfter.on('focus', setFocusToLastFocusableElement);
+    $botTrap.on('focus', setFocusToLastFocusableElement);
 
     /**
     * @method "jQuery.trapKeyboard"
