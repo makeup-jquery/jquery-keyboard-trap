@@ -2,85 +2,86 @@
 // Generated on Tue Aug 11 2015 11:33:37 GMT-0700 (PDT)
 
 module.exports = function(config) {
-  config.set({
+    config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+        basePath: '',
 
 
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+        // frameworks to use
+        // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+        frameworks: ['jasmine'],
 
 
-    // list of files / patterns to load in the browser
-    files: [
-      'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/jquery-focusable/jquery.focusable.js',
-      'jquery.keyboardtrap.js',
-      'test-data.js',
-      'test-setup.js',
-      'test.js'
-    ],
+        // list of files / patterns to load in the browser
+        files: [
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/jquery-focusable/jquery.focusable.js',
+            'jquery.keyboardtrap.js',
+            'test-data.js',
+            'test-setup.js',
+            'test.js'
+        ],
 
 
-    // list of files to exclude
-    exclude: [
-    ],
+        // list of files to exclude
+        exclude: [
+        ],
 
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-        'jquery.keyboardtrap.js':'coverage'
-    },
+        // preprocess matching files before serving them to the browser
+        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+        preprocessors: {
+            'jquery.keyboardtrap.js': 'coverage'
+        },
 
 
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'html', 'junit', 'coverage'],
+        // test results reporter to use
+        // possible values: 'dots', 'progress'
+        // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+        reporters: ['progress', 'html', 'junit', 'coverage'],
 
-    htmlReporter: {
-        namedFiles: true,
-        outputDir: 'test_reports/html'
-    },
+        htmlReporter: {
+            namedFiles: true,
+            outputDir: 'test_reports/html'
+        },
 
-    junitReporter: {
-        outputDir: 'test_reports/junit'
-    },
+        junitReporter: {
+            outputDir: 'test_reports/junit'
+        },
 
-    coverageReporter: {
-        dir: 'test_reports/',
-        reporters: [
-            { type: 'lcov', subdir: 'coverage' }
-        ]
-    },
+        coverageReporter: {
+            dir: 'test_reports/',
+            reporters: [
+                { type: 'lcov', subdir: 'coverage' }
+            ]
+        },
 
-    // web server port
-    port: 9876,
-
-
-    // enable / disable colors in the output (reporters and logs)
-    colors: true,
+        // web server port
+        port: 9876,
 
 
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
 
 
-    // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+        // level of logging
+        // possible values:
+        // config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+        logLevel: config.LOG_INFO,
 
 
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: false,
 
 
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
-  })
-}
+        // start these browsers
+        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        browsers: ['PhantomJS'],
+
+
+        // Continuous Integration mode
+        // if true, Karma captures browsers, runs the tests and exits
+        singleRun: true
+    });
+};

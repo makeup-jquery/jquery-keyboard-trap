@@ -1,3 +1,5 @@
+/* eslint no-undef: 0 */
+
 data.forEach(function(data) {
     describe("when trap is activated", function() {
         beforeAll(function() {
