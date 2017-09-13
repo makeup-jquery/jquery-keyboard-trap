@@ -1403,7 +1403,7 @@ escodegen@1.8.x, escodegen@^1.6.0, escodegen@^1.8.1:
   optionalDependencies:
     source-map "~0.2.0"
 
-eslint-config-ebay@^0.1.5:
+eslint-config-ebay@~0.1:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/eslint-config-ebay/-/eslint-config-ebay-0.1.5.tgz#5103e2b5132e65d83d86dc10430359c230050848"
 
@@ -2301,10 +2301,6 @@ jasmine-core@^2:
 jquery-focusable@~0.3:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/jquery-focusable/-/jquery-focusable-0.3.0.tgz#4932ed55fde18d74f08a06783a2f14782afcacd1"
-
-jquery-migrate@^3:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.0.0.tgz#03f320596fe1a1db09cdcfb74b14571994aad7bb"
 
 jquery@>=1.11:
   version "3.2.1"

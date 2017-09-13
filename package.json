@@ -48,7 +48,6 @@
     "jasmine-core": "^2",
     "jquery": ">=1.11",
     "jquery-focusable": "~0.3",
-    "jquery-migrate": "^3",
     "jsdoc": "^3",
     "jsmin": "^1",
     "karma": "^1",
