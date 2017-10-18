@@ -1,7 +1,7 @@
 {
   "name": "jquery-keyboard-trap",
   "description": "Traps keyboard focus cycle within element's interactive children.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "npm run lasso && parallelshell 'npm run server' 'npm run watch'",
     "tdd": "karma start --autoWatch true --singleRun false",
