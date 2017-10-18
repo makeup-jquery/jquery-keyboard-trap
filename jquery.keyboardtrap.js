@@ -1,12 +1,12 @@
 /**
 * @file jQuery singleton traps keyboard focus cycle within given element's interactive children
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 1.0.0
+* @version 1.0.1
 * @requires jquery
 * @requires jquery-focusable
 */
 (function($, window, document, undefined) {
-    var pluginName = 'jquery-keyboard-trap';
+    var pluginName = 'jquery-keyboard-trap'; // eslint-disable-line no-unused-vars
 
     var trapTemplate = '<div tabindex="0" class="keyboard-trap-boundary">';
     var $topTrap = $(trapTemplate);

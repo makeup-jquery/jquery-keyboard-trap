@@ -24,10 +24,6 @@
     "build"
   ],
   "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
-  "homepage": "https://github.com/ianmcburnie/jquery-keyboard-trap",
-  "bugs": {
-    "url": "https://github.com/ianmcburnie/jquery-keyboard-trap/issues"
-  },
   "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
@@ -37,17 +33,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ianmcburnie/jquery-keyboard-trap.git"
+    "url": "https://github.com/makeup-jquery/jquery-keyboard-trap.git"
   },
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2",
-    "coveralls": "^2",
+    "coveralls": "^3",
     "eslint": "^4",
     "eslint-config-ebay": "~0.1",
     "jasmine-core": "^2",
     "jquery": ">=1.11",
-    "jquery-focusable": "~0.3",
+    "jquery-focusable": "^1",
     "jsdoc": "^3",
     "jsmin": "^1",
     "karma": "^1",
@@ -65,7 +61,7 @@
   },
   "peerDependencies": {
     "jquery": ">=1.11",
-    "jquery-focusable": "~0.3"
+    "jquery-focusable": "^1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

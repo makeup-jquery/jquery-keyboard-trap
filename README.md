@@ -1,10 +1,10 @@
 # jquery-keyboard-trap
 
 <p>
-    <a href="https://travis-ci.org/ianmcburnie/jquery-keyboard-trap"><img src="https://api.travis-ci.org/ianmcburnie/jquery-keyboard-trap.svg?branch=master" alt="Build Status" /></a>
-    <a href='https://coveralls.io/github/ianmcburnie/jquery-keyboard-trap?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-keyboard-trap/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
-    <a href="https://david-dm.org/ianmcburnie/jquery-keyboard-trap"><img src="https://david-dm.org/ianmcburnie/jquery-keyboard-trap.svg" alt="Dependency status" /></a>
-    <a href="https://david-dm.org/ianmcburnie/jquery-keyboard-trap#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-keyboard-trap/dev-status.svg" alt="devDependency status" /></a>
+    <a href="https://travis-ci.org/makeup-jquery/jquery-keyboard-trap"><img src="https://api.travis-ci.org/makeup-jquery/jquery-keyboard-trap.svg?branch=master" alt="Build Status" /></a>
+    <a href='https://coveralls.io/github/makeup-jquery/jquery-keyboard-trap?branch=master'><img src='https://coveralls.io/repos/makeup-jquery/jquery-keyboard-trap/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+    <a href="https://david-dm.org/makeup-jquery/jquery-keyboard-trap"><img src="https://david-dm.org/makeup-jquery/jquery-keyboard-trap.svg" alt="Dependency status" /></a>
+    <a href="https://david-dm.org/makeup-jquery/jquery-keyboard-trap#info=devDependencies"><img src="https://david-dm.org/makeup-jquery/jquery-keyboard-trap/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
 **ATTENTION:** A non-jQuery version is now available at [makeup-keyboard-trap](https://github.com/makeup-js/makeup-keyboard-trap).
@@ -67,7 +67,7 @@ None.
 ## Dependencies
 
 * [jquery](https://jquery.com/)
-* [jquery-focusable](https://github.com/ianmcburnie/jquery-focusable)
+* [jquery-focusable](https://github.com/makeup-jquery/jquery-focusable)
 
 ## Notes
 
@@ -108,8 +108,8 @@ JSDocs are generated under `./jsdoc` folder.
 
 ## CI Build
 
-https://travis-ci.org/ianmcburnie/jquery-keyboard-trap
+https://travis-ci.org/makeup-jquery/jquery-keyboard-trap
 
 ## Code Coverage
 
-https://coveralls.io/github/ianmcburnie/jquery-keyboard-trap?branch=master
+https://coveralls.io/github/makeup-jquery/jquery-keyboard-trap?branch=master
